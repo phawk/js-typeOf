@@ -7,6 +7,7 @@ JavaScripts typeof operator sucks! This aims to provide an extremely simple meth
 ### v0.1.0
 
 * Added support for `null`
+* Add extra tests
 
 ### v0
 
