@@ -2,11 +2,13 @@
 
 JavaScripts typeof operator sucks! This aims to provide an extremely simple method to call to check typeof and should be a little more epectable, and reduce boilerplate on your input checking. 
 
-    // Rudementary example
-    if (objectToTest && typeof objectToTest === "object" && objectToTest instanceof Array)
+```js
+// Rudementary example
+if (objectToTest && typeof objectToTest === "object" && objectToTest instanceof Array)
 
-    // Easier
-    if (typeOf(objectToTest) === "array")
+// Easier
+if (typeOf(objectToTest) === "array")
+```
 
 ## Changelog
 
