@@ -12,6 +12,10 @@ if (typeOf(objectToTest) === "array")
 
 ## Changelog
 
+### v 0.1.2
+
+* Massively simplify and optimise
+
 ### v 0.1.1
 
 * Custom constructors return typeof as `object`
@@ -21,7 +25,3 @@ if (typeOf(objectToTest) === "array")
 
 * Added support for `null`
 * Add extra tests
-
-## Credits
-
-Initial snippet taken from: [http://nagoon97.wordpress.com/2008/03/10/gettype/](http://nagoon97.wordpress.com/2008/03/10/gettype/)
