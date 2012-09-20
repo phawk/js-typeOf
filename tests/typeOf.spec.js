@@ -2,8 +2,12 @@ describe("JS typeOf method", function() {
 
     describe("Booleans", function() {
 
-        it("should return boolean", function() {
+        it("true should return boolean", function() {
             typeOf(true).should.equal("boolean");
+        });
+
+        it("false should return boolean", function() {
+            typeOf(false).should.equal("boolean");
         });
 
     });
@@ -42,24 +46,71 @@ describe("JS typeOf method", function() {
 
     describe("Arrays", function() {
 
-        it("should return array", function() {
+        it("should return array for empty arrays", function() {
             typeOf([]).should.equal("array");
+        });
+
+        it("should return array for non empty arrays", function() {
+            typeOf([1, 2, 3]).should.equal("array");
+        });
+
+        it("should return array for array constructors", function() {
+            typeOf(new Array()).should.equal("array");
         });
 
     });
 
     describe("Objects", function() {
 
-        it("should return object", function() {
+        it("should return object for object literals", function() {
             typeOf({}).should.equal("object");
+        });
+
+        it("should return object for instatiated constructors", function() {
+            function Todo() {
+
+            }
+            var obj = new Todo();
+            typeOf(obj).should.equal("object");
+
         });
 
     });
 
     describe("Functions", function() {
 
-        it("should return function", function() {
+        it("should return function for anon function", function() {
             typeOf(function() {}).should.equal("function");
+        });
+
+        it("should return function for named method", function() {
+            function Todo() {
+
+            }
+            typeOf(Todo).should.equal("function");
+        });
+
+        it("should return function for named method", function() {
+            var todo = function() {
+                
+            }
+            typeOf(todo).should.equal("function");
+        });
+
+    });
+
+    describe("Date", function() {
+
+        it("should return object", function() {
+            typeOf(new Date()).should.equal("object");
+        });
+
+    });
+
+    describe("Error", function() {
+
+        it("should return object", function() {
+            typeOf(new Error()).should.equal("object");
         });
 
     });
