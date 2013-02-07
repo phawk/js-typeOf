@@ -144,22 +144,22 @@ describe("typeOf()", function() {
 describe("is()", function() {
 
     it("should work with Booleans", function() {
-        is("boolean", true).should.be.true;
+        is(true, "boolean").should.be.true;
     });
 
     it("should work with Strings", function() {
-        is("string", "Some string").should.be.true;
+        is("Some string", "string").should.be.true;
     });
 
     it("should work with Objects", function() {
         var obj = {};
-        is("object", obj).should.be.true;
-        is("object", "string").should.be.false;
+        is(obj, "object").should.be.true;
+        is("string", "object").should.be.false;
     });
 
     it("should work with Arrays", function() {
         var obj = [];
-        is("array", obj).should.be.true;
+        is(obj, "array").should.be.true;
     });
 
 });

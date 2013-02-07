@@ -12,18 +12,23 @@ if (objectToTest && typeof objectToTest === "object" && objectToTest instanceof 
 if (typeOf(objectToTest) === "array")
 ```
 
-## is("Object", Object)
+## is(Object, "Object")
 
 Used for shorthand comparisons, returns a boolean.
 
 ```js
 var obj = {};
 
-is("object", obj); // true
-is("string", obj); // false
+is(obj, "object"); // true
+is(obj, "string"); // false
 ```
 
 ## Changelog
+
+### v0.3.0
+
+* Switched is("number", 5) to is(5, "number") for better readability.
+* Added more resiliant check for null and undefined for odd environments, like phantomJS.
 
 ### v0.2.0
 
